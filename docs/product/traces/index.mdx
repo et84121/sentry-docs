@@ -70,42 +70,6 @@ Within each trace, we also return some of your matching spans to help you interp
 - The span duration.
 - The relative time of when the span happened.
 
-## How to search traces
-
-Trace explorer allows you to search for up to 3 span conditions within a trace. Each set of span conditions matches against a particular span in a trace.
-
-Adding one set of span conditions let's you search all spans.
-
-The following example shows you all traces where:
-- A user with the email `foo@example.com` loaded a page on your frontend on a specific route
-
-![View of trace explorer with one span conditions set](./img/traces-one-span-conditions-example.png)
-
-Alternatively, adding multiple span conditions will only return traces that contain ALL span conditions.
-
-The following example let's you find a trace where:
-- A user with the email `foo@example.com` loaded a page on your frontend on a specific route
-- AND within that same trace, there was a slow database span
-
-![View of trace explorer with multple span conditions set](./img/traces-multiple-span-conditions-example.png)
-
-### Filter by Environment, and Date Range
-
-These common filters allow you to filter on your environments, as well as specify the date range you want to zoom in on.
-
-Since traces are distributed in nature, there is no page-wide project filter, but you can filter on projects per set of span conditions by adding `project:your-project-here` in the search.
-
-### Filter by Search Conditions
-
-<Note>
-
-When performing searches on spans, based on your search criteria
-and sample rate, the events available may be limited because Traces uses
-sampled data only. Learn more by reading about [our retention priorities](/product/performance/retention-priorities/).
-
-</Note>
-
-All events have built-in key fields or custom tags, this includes our span data. Use the search bar to enter these keys and assign them values. This will filter down your list of events. For a list of the built-in key fields, check out our [Searchable Properties for spans documentation](/product/sentry-basics/search/searchable-properties/spans).
 
 ## Syntax
 
